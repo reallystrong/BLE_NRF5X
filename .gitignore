@@ -1,0 +1,6 @@
+*/_build
+*.uvgui.*
+*.uvmpw
+*.uvoptx
+*.uvguix.*
+
