@@ -15,7 +15,7 @@
 uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID; /**< Handle of the current connection. */
 #define APP_BLE_CONN_CFG_TAG 1                    /**< A tag identifying the SoftDevice BLE configuration. */
 
-#define DEVICE_NAME "Nordic_UART"                        /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME "Your_Device"                        /**< Name of device. Will be included in the advertising data. */
 #define NUS_SERVICE_UUID_TYPE BLE_UUID_TYPE_VENDOR_BEGIN /**< UUID type for the Nordic UART Service (vendor specific). */
 
 NRF_BLE_GATT_DEF(m_gatt);           /**< GATT module instance. */
@@ -316,7 +316,5 @@ void app_ble_init(void)
     conn_params_init();
 
     // Start execution.
-    printf("\r\nUART started.\r\n");
-    NRF_LOG_INFO("Debug logging for UART over RTT started.");
     advertising_start();
 }

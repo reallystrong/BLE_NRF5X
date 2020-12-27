@@ -74,18 +74,19 @@ static void idle_state_handle(void)
 
 int main(void)
 {
-    // bsp init
-    bsp_uart_init();
-    bsp_buttons_leds_init();
-
     //commont init
     log_init();
     timers_init();
     power_management_init();
+	
+    // bsp init
+    bsp_uart_init();
+    bsp_buttons_leds_init();
 
     //app init
     app_ble_init();
-
+	
+    NRF_LOG_INFO("APP RUNNING...");
     // Enter main loop.
     for (;;)
     {

@@ -144,7 +144,7 @@ __STATIC_INLINE bool pin_in_use_by_port(uint32_t pin)
 
 __STATIC_INLINE bool pin_in_use_by_gpiote(uint32_t pin)
 {
-    return (m_cb.pin_assignments[pin] >= 0);
+    return (m_cb.pin_assignments[pin] > 0);
 }
 
 
